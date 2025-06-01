@@ -1,0 +1,137 @@
+type: collection.insomnia.rest/5.0
+name: Task API
+meta:
+  id: wrk_79a4131640784b94973353690c9fadb8
+  created: 1748697247391
+  modified: 1748804902970
+collection:
+  - url: http://localhost:8080/tasks
+    name: Find All
+    meta:
+      id: req_9416f191438b4741acbffa3fab470865
+      created: 1748701091336
+      modified: 1748723857524
+      isPrivate: false
+      sortKey: -1748701091337
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/tasks
+    name: Add Task
+    meta:
+      id: req_2b836f369dfe49ca82730a01af4fee52
+      created: 1748723001921
+      modified: 1748787740254
+      isPrivate: false
+      sortKey: -1748723753456
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"description": "Criar documentação"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/tasks/3
+    name: Find By Id
+    meta:
+      id: req_9e4b30be1d404578b2a22b31ea2de4d1
+      created: 1748723753256
+      modified: 1748798492630
+      isPrivate: false
+      sortKey: -1748723753256
+    method: GET
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/tasks/3
+    name: Update Task
+    meta:
+      id: req_a1011978618c47d1918d4cad88d21fb7
+      created: 1748724180054
+      modified: 1748797714398
+      isPrivate: false
+      sortKey: -1748723753356
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"id_taks": 3,
+        	"description": "Jogar"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/tasks/3
+    name: Delete Task
+    meta:
+      id: req_2cf01144cac6467798ed3244e976924f
+      created: 1748725111943
+      modified: 1748798502233
+      isPrivate: false
+      sortKey: -1748723753306
+    method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_5a37d31e92661c5c8d9ec578164d1913e41f2712
+    created: 1748697247394
+    modified: 1748697247394
+environments:
+  name: Base Environment
+  meta:
+    id: env_5a37d31e92661c5c8d9ec578164d1913e41f2712
+    created: 1748697247393
+    modified: 1748697247393
+    isPrivate: false

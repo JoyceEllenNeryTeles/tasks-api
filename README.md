@@ -19,3 +19,4 @@ Após isso na pasta app execute o seguinte comando para levantar a aplicação
 go run main.go
 ```
 
+A collection do insomnia com as chamadas se encontra dentro da pasta app 

@@ -9,7 +9,12 @@ Para add no docker basta accessar a pasta app e executar o comando
 docker compose up
 ```
 
-Com o postegres localmente basta rodar o comando 
+Com o postegres localmente será necessario criar a tabela no BD
+
+para isso basta rodar o script que se encontra na pasta app/infra/ToDo.sql
+
+Após isso na pasta app execute o seguinte comando para levantar a aplicação
+
 ```
 go run main.go
 ```

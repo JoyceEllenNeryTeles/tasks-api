@@ -2,24 +2,6 @@
   Tasks - Api
 </h1>
 
-<br />
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=license&message=MIT" alt="License">
-  <img src="https://img.shields.io/github/repo-size/Lissone/point-control-api" alt="Repo size" />
-  <img src="https://img.shields.io/github/languages/top/Lissone/point-control-api" alt="Top lang" />
-  <img src="https://img.shields.io/github/stars/Lissone/point-control-api" alt="Stars repo" />
-  <img src="https://img.shields.io/github/forks/Lissone/point-control-api" alt="Forks repo" />
-  <img src="https://img.shields.io/github/issues-pr/Lissone/point-control-api" alt="Pull requests" >
-  <img src="https://img.shields.io/github/last-commit/Lissone/point-control-api" alt="Last commit" />
-</p>
-
-<p align="center">
-  <a href="https://github.com/Lissone/point-control-api/issues">Report bug</a>
-  ·
-  <a href="https://github.com/Lissone/point-control-api/issues">Request feature</a>
-</p>
-
-<br />
 
 ## Técnologias necessárias
 

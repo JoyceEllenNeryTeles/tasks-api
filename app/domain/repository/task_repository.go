@@ -37,17 +37,18 @@ func (tr *TaskRepository) GetTasks() ([]entity.Task, error) {
 	}
 
 	if err := rows.Err(); err != nil {
-		fmt.Errorf("Error whiler retrieving tasks: %v", err)
+		fmt.Errorf("Error while retrieving tasks: %v", err)
 		return []entity.Task{}, err
 	}
 
+	tr.coonnection.Close()
 	return tasks, nil
 }
 
 func (tr *TaskRepository) AddTask(task entity.Task) (int64, error) {
 	query, err := tr.coonnection.Prepare("INSERT INTO tasks_table (description) VALUES ($1) returning id")
 	if err != nil {
-		fmt.Errorf("Error preparinf insert task: %v", err)
+		fmt.Errorf("Error preparing insert task: %v", err)
 		return 0, err
 	}
 
@@ -67,7 +68,7 @@ func (tr *TaskRepository) FindTaskById(id int64) (*entity.Task, error) {
 	err := row.Scan(&task.Id, &task.Description)
 	if err != nil {
 		if err == sql.ErrNoRows {
-			return nil, nil // Task not found
+			return nil, nil
 		}
 		fmt.Errorf("Error scanning task by ID: %v", err)
 		return nil, err

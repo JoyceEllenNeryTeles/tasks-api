@@ -15,7 +15,7 @@ O banco de dados escolhido foi o PostgreSQL, por ser capaz de lidar eficientemen
 ## Testando localmente
 
 
-Para será necessários ter instalado a linguagem [Golang](https://go.dev/dl/)
+Para rodar o projeto localmente será necessários ter instalado a linguagem [Golang](https://go.dev/dl/)
 
 O projeto pode ser clonado utiizando o seguite comando:
 ```

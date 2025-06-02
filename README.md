@@ -2,12 +2,15 @@
   Tasks - Api
 </h1>
 
+## Description
+Esse projeto foi desenvolvido com finalidade de criar uma API para gerenciamente de tarefas
+
+O banco de dados escolhido foi o PostgreSQL, por ser capaz de lidar eficientemente com grandes volumes de dados e acessos simultâneos. Além disso, optei por utilizá-lo como um desafio pessoal, já que é a primeira vez que o utilizo em um projeto.
 
 ## Técnologias necessárias
 
 - [Go](https://go.dev/)
 - [PostreSQL](https://www.postgresql.org/)
-
 
 ## Testando localmente
 

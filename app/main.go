@@ -1,11 +1,11 @@
 package main
 
 import (
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/domain/repository"
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/infra/controller"
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/infra/db"
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/interfaces"
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/usecase"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/domain/repository"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/infra/controller"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/infra/db"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/interfaces"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/usecase"
 	"github.com/gin-gonic/gin"
 )
 
@@ -24,6 +24,7 @@ func main() {
 	server.POST("/tasks", taskController.AddTask)
 	server.GET("/tasks", taskController.GetTasks)
 	server.GET("/tasks/:id", taskController.FindTaskById)
+	server.GET("/tasks/owner", taskController.FindTasksByOwner)
 	server.PUT("/tasks/:id", taskController.UpdateTask)
 	server.DELETE("/tasks/:id", taskController.DeleteTask)
 

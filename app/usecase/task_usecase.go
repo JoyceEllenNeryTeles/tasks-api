@@ -1,8 +1,8 @@
 package usecase
 
 import (
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/domain/entity"
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/domain/repository"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/domain/entity"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/domain/repository"
 	"github.com/gin-gonic/gin"
 )
 
@@ -28,6 +28,11 @@ func (tuc *TaskUsecase) AddTask(ctx *gin.Context, task entity.Task) (int64, erro
 func (tuc *TaskUsecase) FindTaskById(id int64) (*entity.Task, error) {
 	task, err := tuc.repository.FindTaskById(id)
 	return task, err
+}
+
+func (tuc *TaskUsecase) FindTaskByOwner(owner string) ([]entity.Task, error) {
+	tasks, err := tuc.repository.FindTasksByOwner(owner)
+	return tasks, err
 }
 
 func (tuc *TaskUsecase) UpdateTask(ctx *gin.Context, task entity.Task) error {

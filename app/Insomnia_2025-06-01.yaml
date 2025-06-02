@@ -30,16 +30,18 @@ collection:
     meta:
       id: req_2b836f369dfe49ca82730a01af4fee52
       created: 1748723001921
-      modified: 1748787740254
+      modified: 1748822128604
       isPrivate: false
       sortKey: -1748723753456
     method: POST
     body:
       mimeType: application/json
       text: |-
-        {
-        	"description": "Criar documentação"
-        }
+        	{
+        		"description": "Fazer compras",
+        		"owner": "Joy",
+        		"status": "0"
+        	}
     headers:
       - name: Content-Type
         value: application/json
@@ -53,12 +55,12 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/tasks/3
+  - url: http://localhost:8080/tasks/1
     name: Find By Id
     meta:
       id: req_9e4b30be1d404578b2a22b31ea2de4d1
       created: 1748723753256
-      modified: 1748798492630
+      modified: 1748822006937
       isPrivate: false
       sortKey: -1748723753256
     method: GET
@@ -78,17 +80,19 @@ collection:
     meta:
       id: req_a1011978618c47d1918d4cad88d21fb7
       created: 1748724180054
-      modified: 1748797714398
+      modified: 1748822392213
       isPrivate: false
       sortKey: -1748723753356
     method: PUT
     body:
       mimeType: application/json
       text: |-
-        {
-        	"id_taks": 3,
-        	"description": "Jogar"
-        }
+        	{
+        		"id_taks": 3,
+        		"description": "Fazer compras",
+        		"owner": "Joy",
+        		"status": "0"
+        	}
     headers:
       - name: Content-Type
         value: application/json
@@ -102,15 +106,40 @@ collection:
         send: true
         store: true
       rebuildPath: true
-  - url: http://localhost:8080/tasks/3
+  - url: http://localhost:8080/tasks/1
     name: Delete Task
     meta:
       id: req_2cf01144cac6467798ed3244e976924f
       created: 1748725111943
-      modified: 1748798502233
+      modified: 1748822142934
       isPrivate: false
       sortKey: -1748723753306
     method: DELETE
+    headers:
+      - name: User-Agent
+        value: insomnia/11.1.0
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: http://localhost:8080/tasks/owner
+    name: Find By Owner
+    meta:
+      id: req_7f0390f6fa5b445499d52ab23cafe11a
+      created: 1748822422435
+      modified: 1748822560530
+      isPrivate: false
+      sortKey: -1748712422296.5
+    method: GET
+    parameters:
+      - id: pair_43bf5f58b02e491cb84b92e9fb274dd0
+        name: owner
+        value: Joy
+        disabled: false
     headers:
       - name: User-Agent
         value: insomnia/11.1.0

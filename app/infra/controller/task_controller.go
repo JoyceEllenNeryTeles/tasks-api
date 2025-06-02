@@ -4,8 +4,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/domain/entity"
-	"github.com/JoyceEllenNeryTeles/tasks-api/app/interfaces"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/domain/entity"
+	"github.com/JoyceEllenNeryTeles/test/tasks-api/app/interfaces"
 	"github.com/gin-gonic/gin"
 )
 
@@ -45,7 +45,29 @@ func (c *TaskController) AddTask(ctx *gin.Context) {
 	ctx.JSON(http.StatusCreated, id)
 }
 
+func (c *TaskController) FindTasksByOwner(ctx *gin.Context) {
+	owner := ctx.Query("owner")
+	if owner == "" {
+		ctx.JSON(http.StatusBadRequest, gin.H{"error": "Owner is required"})
+		return
+	}
+
+	tasks, err := c.taskInterface.FindTaskByOwner(owner)
+	if err != nil {
+		ctx.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to find tasks by owner"})
+		return
+	}
+
+	if len(tasks) == 0 {
+		ctx.JSON(http.StatusNotFound, gin.H{"message": "No tasks found for the specified owner"})
+		return
+	}
+
+	ctx.JSON(http.StatusOK, tasks)
+}
+
 func (c *TaskController) FindTaskById(ctx *gin.Context) {
+
 	idStr := ctx.Param("id")
 	if idStr == "" {
 		ctx.JSON(http.StatusBadRequest, gin.H{"error": "Task ID is required"})

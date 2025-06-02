@@ -17,6 +17,12 @@ O banco de dados escolhido foi o PostgreSQL, por ser capaz de lidar eficientemen
 
 Para rodar o projeto localmente será necessários ter instalado a linguagem [Golang](https://go.dev/dl/)
 
+Após instalação do go verifique nas variaves de ambiente foram criadas:
+```
+GOPATH=%USERPROFILE%\go
+PATH=%USERPROFILE%\go\bin
+```
+
 O projeto pode ser clonado utiizando o seguite comando:
 ```
 https://github.com/JoyceEllenNeryTeles/tasks-api.git
@@ -29,6 +35,12 @@ Caso esteja usando o docker, basta accessar a pasta app e executar o comando
 ```
 docker compose up
 ```
+
+Se ocorrer erro ao criar a imagem com do Postgre, execute o seguinte comando para apagar a imagem e tente criar uma nova:
+```
+docker compose down -v
+```
+
 
 Com o Postegres localmente será necessario criar a tabela no BD, para isso pode-se utilizar o [DBeaver](https://dbeaver.io/download/)
 

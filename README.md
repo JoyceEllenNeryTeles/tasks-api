@@ -17,7 +17,7 @@ O banco de dados escolhido foi o PostgreSQL, por ser capaz de lidar eficientemen
 
 Para rodar o projeto localmente será necessários ter instalado a linguagem [Golang](https://go.dev/dl/)
 
-Após instalação do go verifique nas variaves de ambiente foram criadas:
+Após instalação do go verifique se as variaves de ambiente foram criadas:
 ```
 GOPATH=%USERPROFILE%\go
 PATH=%USERPROFILE%\go\bin
@@ -40,9 +40,7 @@ Se ocorrer erro ao criar a imagem com do Postgre, execute o seguinte comando par
 ```
 docker compose down -v
 ```
-
-
-Com o Postegres localmente será necessario criar a tabela no BD, para isso pode-se utilizar o [DBeaver](https://dbeaver.io/download/)
+Agora será necessario criar a tabela no BD, para isso utilze o [DBeaver](https://dbeaver.io/download/) ou a ferramenta de sua preferencia
 
 Rode o script que se encontra na pasta app/infra/ToDo.sql
 
